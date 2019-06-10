@@ -20,9 +20,9 @@ function TimeTable(usrParam) {
         throw "Base template not found";
     }
 
-	var user_filters = null;
+    var user_filters = null;
     var baseTpl = params.baseTemplate.clone();
-	baseTpl.removeAttr('id');
+    baseTpl.removeAttr('id');
     baseTpl.appendTo(params.target);
     baseTpl.show();
 
@@ -637,11 +637,10 @@ function TimeTable(usrParam) {
 
 	var btnSend = baseTpl.find('.row-valid button');
 	btnSend.click(function () {
-	    btnSend
-			.attr('disabled', true)
-			.find('i')
-			.removeClass('fa-check')
-			.addClass('fa-spinner fa-spin');
+	btnSend.attr('disabled', true)
+		.find('i')
+	    	.removeClass('fa-check')
+		.addClass('fa-spinner fa-spin');
 
 	    _sendDataToServer(function (success, message) {
 	        var messageDisplayLength = 3000;
